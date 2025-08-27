@@ -1,0 +1,29 @@
+:root{--bg:#071025;--muted:#9aa4b2}
+*{box-sizing:border-box}
+html,body,#root{height:100%;margin:0}
+body{font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue';background:linear-gradient(180deg,var(--bg),#020617);color:#e6eef8}
+
+.app{display:flex;flex-direction:column;min-height:100vh}
+.header{padding:12px 20px;font-weight:700}
+.main{display:flex;gap:24px;align-items:flex-start;padding:12px}
+.footer{text-align:center;padding:12px;color:var(--muted)}
+
+/* Canvas area */
+.canvas-container{flex:1;min-height:70vh;height:80vh;border-radius:12px;overflow:hidden}
+canvas{width:100%;height:100%}
+
+/* Sections that scroll alongside the canvas */
+.sections{width:380px;display:flex;flex-direction:column}
+.section{min-height:80vh;padding:28px;background:rgba(255,255,255,0.03);border-radius:12px;margin-bottom:20px}
+.section.hero{display:flex;flex-direction:column;justify-content:center}
+.section h1{margin:0 0 12px 0}
+.section h2{margin-top:0}
+
+/* Html overlays in the scene */
+.card{background:rgba(255,255,255,0.06);padding:8px 10px;border-radius:8px;color:#e6eef8}
+.orb{background:transparent;padding:6px 8px;border-radius:6px}
+
+@media (max-width:900px){
+.main{flex-direction:column}
+.sections{width:100%}
+}
